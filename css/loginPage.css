@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    background-color: #048e8e;
+}
+
+body.active{
+    background-color: #e52572;
+}
+
+.container{
+    width: 800px;
+    height: 500px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.form-block{
+    height: 100%;
+    background-color: #f87902ce;
+    box-shadow: 0px 5px 45px black;
+    display: flex;
+    align-items: center;
+}
+
+.block-item{
+    text-align: center;
+    width: 50%;
+}
+
+.block-title{
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.block-item-btn{
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.signIn-button{
+    background-color: #048e8e;
+}
+
+.signUp-button{
+    background-color: #e52572;
+}
+
+.form-box{
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 5 45 black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box.active{
+    left: 50%;
+}
+
+/* Форма входу */
+
+.form{
+    width: 100%;
+    padding: 50px;
+    font-size: 16px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.form-signup{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form-signin{
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form-signup{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form-signin{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+}
+
+.form_input{
+    width: 70%;
+    padding: 10px;
+    border: solid 1px black;
+    font-size: inherit;
+}
+
+.form-btn{
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    background-color: #048e8e;
+    color: #fff;
+    padding: 10px 40px;
+}
+
+.form-forgot{
+    color: black;
+}
+
+.form-btn-signup{
+    background-color: #e52572;
+}
+
+.msg{
+    border: 2px solid #f87902ce;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    width: 70%;
+    font-weight: bold;
+}
+
+@media (max-width: 992px ){
+    .container{
+        max-width: 400px;
+        height: 650px;
+        padding: 0px;
+        margin: 0 20px;
+    }
+
+    .form-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .block-item{
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .form-box{
+        width: 100%;
+        height: 500px;
+        box-shadow: none;
+
+        top: 0px;
+    }
+
+    .form-box.active{
+        top: 150px;
+        left: 0px;
+    }
+}
+
+
+/* Помилки */
+
+.error {
+    border: 2px solid red;
+}
+  
+p {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+}
+
+span.error-message {
+    display: block;
+    margin-top: 5px;
+    color: red;
+}
